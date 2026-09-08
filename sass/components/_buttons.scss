@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+
+
+.btn {
+  display: inline-flex;
+  align-items: stretch;
+  align-self: flex-start;
+  width:fit-content;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding: 15px 45px;
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: stretch;
+
+     img {
+      display: block;
+      height: 100%;
+      width: auto;  
+      object-fit: cover;
+    }
+
+  }
+
+  &--primary {
+    background-color: $color-dark;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-gold;
+      color: $color-dark;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-dark;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-gold;
+      color: $color-dark;
+    }
+   }
+
+    @include breakpoint(tablet) {
+    &__label {
+      padding: 20px 20px;
+      font-size: 16px;
+    }
+  }
+
+   &__icon {
+    display: flex;
+    align-items: stretch;
+
+     img {
+      display: block;
+      height: 100%;
+      width: auto;  
+      object-fit: cover;
+    }
+
+  }
+}
