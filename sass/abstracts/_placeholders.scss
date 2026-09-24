@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+
+%heading-style {
+  font-family: $font-heading;
+  font-weight: $fw-black;
+  text-transform: uppercase;
+}
+
+
+%link-reset {
+  color: inherit;
+  text-decoration: none;
+}

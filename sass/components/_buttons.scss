@@ -1,51 +1,38 @@
-@use '../abstracts' as *;
-
+@use "../abstracts" as *;
 
 
 .btn {
+  @extend %link-reset;
   display: inline-flex;
   align-items: stretch;
   align-self: flex-start;
-  width:fit-content;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
   overflow: hidden;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px solid $color-gold;
+    outline-offset: 3px;
+  }
 
   &__label {
+    @extend %heading-style;
     display: flex;
     align-items: center;
-    padding: 15px 45px;
-    font-family: $font-heading;
-    font-weight: 900;
-    font-size: 25px;
+    padding: rem(18px) rem(32px);
+    font-size: rem(18px);
     letter-spacing: 0.5px;
-    text-transform: uppercase;
   }
 
+  
   &__icon {
-    display: flex;
-    align-items: stretch;
-
-     img {
-      display: block;
-      height: 100%;
-      width: auto;  
-      object-fit: cover;
-    }
-
+    width: rem(56px);
+    object-fit: cover;
   }
 
-  &--primary {
-    background-color: $color-dark;
-    color: $color-white;
 
-    &:hover {
-      background-color: $color-gold;
-      color: $color-dark;
-    }
-  }
-
+  &--primary,
   &--secondary {
     background-color: $color-dark;
     color: $color-white;
@@ -54,25 +41,5 @@
       background-color: $color-gold;
       color: $color-dark;
     }
-   }
-
-    @include breakpoint(tablet) {
-    &__label {
-      padding: 20px 20px;
-      font-size: 16px;
-    }
-  }
-
-   &__icon {
-    display: flex;
-    align-items: stretch;
-
-     img {
-      display: block;
-      height: 100%;
-      width: auto;  
-      object-fit: cover;
-    }
-
   }
 }

@@ -1,28 +1,37 @@
-//Breakpoints
 
-$breakpoint-tablet: 768px;
-$breakpoint-tablet-horizontal: 1024px;
-$breakpoint-desktop: 1200px;
-$breakpoint-desktopxl: 1440px;
+// COLORES
 
-//Tipografia
+$color-gold: #d5966c;   
+$color-dark: #151515;   
+$color-gray: #444444;   
+$color-white: #ffffff;
 
-$font-heading: "Big Shoulders", sans-serif;
-$font-body: "Outfit", san-serif; 
 
-//Colors
+// TIPOGRAFÍA
 
-$color-gold: #D5966C;
-$color-dark: #151515;
-$color-gray: #444444;
-$color-white: #FFFFFF;
-$color-black: black;
+$font-heading: "Big Shoulders", sans-serif;  
+$font-body: "Outfit", sans-serif;            
 
-// Espaciados 
+$fw-light: 300;
+$fw-regular: 400;
+$fw-black: 900;
+
+
+// ESPACIADOS
 
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 40px;
+
 $cta-height: 484px;
-$cta-height-desktop: 640px;
+
+
+// BREAKPOINTS (mobile-first: se aplican DESDE este ancho)
+
+$breakpoints: (
+  tablet: 768px,
+  laptop: 1024px,
+  desktop: 1200px,
+  wide: 1440px,
+);

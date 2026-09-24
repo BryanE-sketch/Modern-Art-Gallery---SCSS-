@@ -1,13 +1,7 @@
-@use "./abstracts" as *;
 
-@forward './abstracts';
-@forward './vendors';
-@forward './base';
-@forward './components';
-@forward './layout';
-@forward './pages';
-@forward './themes';
-
-
-
-
+@use 'vendors';
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'pages';
+@use 'themes';

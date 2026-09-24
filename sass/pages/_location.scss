@@ -1,0 +1,108 @@
+@use "../abstracts" as *;
+
+
+.map-section {
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    top: $spacing-sm;
+    left: $spacing-sm;
+    z-index: 2;
+  }
+
+  &__map img {
+    width: 100%;
+    height: rem(350px);
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      height: rem(540px);
+    }
+  }
+}
+
+
+.location-details {
+  padding: rem(52px) rem(24px);
+  background-color: $color-dark;
+  color: $color-white;
+
+  &__title {
+    margin-bottom: $spacing-lg;
+    font-size: rem(48px);
+    line-height: rem(44px);
+
+    &-break {
+      display: none;
+    }
+  }
+
+  &__street {
+    margin-bottom: $spacing-sm;
+    color: $color-gold;
+    font-size: rem(18px);
+  }
+
+  &__address {
+    margin-bottom: $spacing-lg;
+    font-size: rem(16px);
+    line-height: 1.5;
+  }
+
+  &__text {
+    font-size: rem(16px);
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+ 
+  @include breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: minmax(rem(220px), rem(320px)) 1fr;
+    column-gap: $spacing-xl;
+    padding: rem(64px) rem(40px);
+
+    &__title {
+      font-size: rem(65px);
+      line-height: 1;
+
+      &-break {
+        display: inline;
+      }
+    }
+
+    &__street {
+      font-size: rem(24px);
+    }
+
+    &__address,
+    &__text {
+      font-size: rem(18px);
+    }
+
+    &__text {
+      margin-top: $spacing-lg;
+    }
+  }
+
+ 
+  @include breakpoint(desktop) {
+    grid-template-columns: 1fr 1fr;
+    padding: rem(80px) rem(96px);
+
+    &__title {
+      font-size: rem(70px);
+    }
+
+    &__address,
+    &__text {
+      font-size: rem(20px);
+    }
+
+    &__text {
+      max-width: rem(500px);
+      margin-top: $spacing-xl;
+    }
+  }
+}

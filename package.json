@@ -1,6 +1,7 @@
+
 {
-  "name": "base-vite-project-sass-2",
-  "version": "0.0.0",
+  "name": "modern-art-gallery",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,9 +13,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
+    "sass": "^1.103.1",
     "vite": "^8.2.2"
-  },
-  "dependencies": {
-    "sass": "^1.103.1"
   }
 }

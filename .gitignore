@@ -1,0 +1,8 @@
+# Dependencias (se reinstalan con npm install)
+node_modules/
+
+# Carpeta generada por "npm run build"
+dist/
+
+# Archivos del sistema de macOS
+.DS_Store
